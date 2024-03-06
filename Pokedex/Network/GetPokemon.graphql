@@ -1,0 +1,27 @@
+query GetPokemon($searchText: String!, $id: Int!, $type: String!, $offset: Int!) {
+  pokemon_v2_pokemon(
+    limit: 20,
+    offset: $offset,
+    where: {
+      _or: [{name: {_regex: $searchText}}, {id: {_eq: $id}}],
+      pokemon_v2_pokemontypes: { pokemon_v2_type: {name: {_regex: $type}}}
+    },
+    order_by: {id: asc}
+  ) {
+    id
+    name
+    height
+    weight
+    pokemon_v2_pokemontypes {
+      pokemon_v2_type {
+        name
+      }
+    }
+    pokemon_v2_pokemonstats {
+      base_stat
+      pokemon_v2_stat {
+        name
+      }
+    }
+  }
+}

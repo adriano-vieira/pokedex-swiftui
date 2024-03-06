@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Pokedex
+
+  Created by Adriano Vieira on 05/03/24.
+  
+*/
+"hp" = "HP";
+"attack" = "Attack:";
+"defense" = "Defense:";
+"special-attack" = "Sp. Attack:";
+"special-defense" = "Sp. Defense:";
+"speed" = "Speed:";
+"accuracy" = "Accuracy:";
+"evasion" = "Evasion:";
